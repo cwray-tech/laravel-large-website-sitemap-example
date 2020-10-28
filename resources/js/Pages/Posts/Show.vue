@@ -40,7 +40,7 @@
                 <div class="prose prose-lg text-gray-500 mx-auto">
                    {{ post.content }}
                 </div>
-                <div class=" max-w-prose prose-lg text-white py-10 mx-auto flex items-center justify-between flex-wrap" v-if="post.user_id === user.id">
+                <div class=" max-w-prose prose-lg text-white py-10 mx-auto flex items-center justify-between flex-wrap" v-if="$page.user && post.user_id === user.id">
                     <inertia-link :href="route('posts.edit', post.id)" class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-xs uppercase tracking-widest font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                         Edit Post
                     </inertia-link>

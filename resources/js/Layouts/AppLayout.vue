@@ -7,7 +7,7 @@
                     <div class="flex">
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
-                            <inertia-link :href="route('dashboard')">
+                            <inertia-link href="/">
                                 <jet-application-mark class="block h-9 w-auto" />
                             </inertia-link>
                         </div>
@@ -27,7 +27,7 @@
                     </div>
 
                     <!-- Settings Dropdown -->
-                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                    <div v-if="$page.user" class="hidden sm:flex sm:items-center sm:ml-6">
                         <div class="ml-3 relative">
                             <jet-dropdown align="right" width="48">
                                 <template #trigger>
@@ -127,10 +127,16 @@
                     <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                         Dashboard
                     </jet-responsive-nav-link>
+                    <jet-responsive-nav-link :href="route('posts.index')" :active="route().current('posts.index')">
+                        Posts
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link :href="route('posts.create')" :active="route().current('posts.create')">
+                        Write a Post
+                    </jet-responsive-nav-link>
                 </div>
 
                 <!-- Responsive Settings Options -->
-                <div class="pt-4 pb-1 border-t border-gray-200">
+                <div v-if="$page.user" class="pt-4 pb-1 border-t border-gray-200">
                     <div class="flex items-center px-4">
                         <div class="flex-shrink-0">
                             <img class="h-10 w-10 rounded-full" :src="$page.user.profile_photo_url" :alt="$page.user.name" />
@@ -209,7 +215,9 @@
         <main>
             <slot></slot>
         </main>
-
+        <footer class="py-6 bg-white">
+            <div class="max-w-7xl mx-auto px-4">Made with love by <a class="text-indigo-500 hover:text-indigo-400 transition duration-150" href="https://chriswray.dev">Chris</a></div>
+        </footer>
         <!-- Modal Portal -->
         <portal-target name="modal" multiple>
         </portal-target>
@@ -231,7 +239,6 @@
             JetNavLink,
             JetResponsiveNavLink,
         },
-
         data() {
             return {
                 showingNavigationDropdown: false,

@@ -10,6 +10,11 @@ use Inertia\Inertia;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -60,7 +65,6 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        Gate::authorize('view', $post);
         return Inertia::render('Posts/Show', ['post'=> $post]);
     }
 
