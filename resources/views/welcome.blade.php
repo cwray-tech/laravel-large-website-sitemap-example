@@ -71,7 +71,7 @@
                     </p>
                     <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                         <div class="rounded-md shadow">
-                            <a href="/posts"
+                            <a href="https://chriswray.dev/posts/how-to-create-a-sitemap-in-laravel-for-a-website-that-contains-thousands-of-records"
                                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                                 Read Tutorial
                             </a>
@@ -89,7 +89,4 @@
         </div>
 
     </div>
-    <footer class="py-6 bg-white">
-        <div class="max-w-7xl mx-auto px-4">Made with love by <a class="text-indigo-500 hover:text-indigo-400 transition duration-150" href="https://chriswray.dev">Chris</a></div>
-    </footer>
 </x-guest-layout>

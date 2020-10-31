@@ -215,9 +215,6 @@
         <main>
             <slot></slot>
         </main>
-        <footer class="py-6 bg-white">
-            <div class="max-w-7xl mx-auto px-4">Made with love by <a class="text-indigo-500 hover:text-indigo-400 transition duration-150" href="https://chriswray.dev">Chris</a></div>
-        </footer>
         <!-- Modal Portal -->
         <portal-target name="modal" multiple>
         </portal-target>

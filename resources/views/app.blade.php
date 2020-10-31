@@ -20,5 +20,8 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
+
+        @include('.partials._footer')
     </body>
+
 </html>

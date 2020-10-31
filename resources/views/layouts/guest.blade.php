@@ -20,5 +20,6 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+        @include('.partials._footer')
     </body>
 </html>
